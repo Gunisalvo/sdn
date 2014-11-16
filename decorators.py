@@ -16,16 +16,3 @@ def log(func):
 			logging.warn(func.func_name + (": %s" % ex))
 			raise ex
 	return log_wrapper
-
-class Cobaia(object):
-
-	def __init__(self):
-		self.name = "John"
-		self.family = "Doe"
-	@log
-	def get_fullname(self):
-		raise IOError("pau!")
-		return self.name+" "+self.family
-
-my_person = Cobaia()
-print my_person.get_fullname()
