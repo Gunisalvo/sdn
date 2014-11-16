@@ -24,9 +24,9 @@ class sdn_switch (object):
 class Controlador (object):
 	@log
 	def __init__ (self, connection, transparent):
-    	self.connection = connection
-    	self.transparent = transparent
-    	self.flow_table = {}
+		self.connection = connection
+		self.transparent = transparent
+		self.flow_table = {}
 		connection.addListeners(self)
 
 	@log
