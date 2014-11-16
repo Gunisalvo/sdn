@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 from decorators import log
 from pox.core import core
+from pox.lib.util import str_to_bool
 
 #@log
 def launch(transparent=False):
