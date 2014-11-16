@@ -10,9 +10,11 @@ def log(func):
 	def log_wrapper(self, *arg, **keyargs):
 		try:
 			logging.debug("calling: " + func.func_name)
+			print "calling: " + func.func_name
 			result = func(self, *arg, **keyargs)
 			return result
 		except Exception as ex:
 			logging.warn(func.func_name + (": %s" % ex))
+			print func.func_name + (": %s" % ex)
 			raise ex
 	return log_wrapper
